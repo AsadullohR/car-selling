@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /* Primary Color*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --v-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --ph: hsla(0, 0%, 100%, 0.75);
+  --bg: hsl(0, 0%, 95%);
+  --hd: hsl(0, 0%, 95%);
+  --btn: hsl(0, 0%, 95%);
+
+  /* Font */
+  --m-size: 1.5rem;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Lexend Deca", "Arial", sans-serif;
+  font-size: var(--m-size);
+  display: flex;
+  flex-direction: column;
+
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.card {
+  flex-direction: column;
+  padding: 5rem;
+  margin: 0 2rem;
+  color: var(--ph);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sedans {
+  background: var(--bright-orange);
+  margin-top: 2rem;
+  border-radius: 8px 8px 0 0;
+}
+.suvs {
+  background: var(--dark-cyan);
+}
+.luxury {
+  background: var(--v-dark-cyan);
+  margin-bottom: 2rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.card svg {
+  margin-bottom: 2.5rem;
+}
+
+.card h3 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  color: var(--hd);
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  word-spacing: 4rem;
+}
+.card p {
+  margin-bottom: 2.5rem;
+  line-height: 2.3rem;
+}
+
+.btn {
+  background: var(--btn);
+  padding: 1.3rem 1.8rem;
+  border-radius: 1.9rem;
+  border-style: none;
+  font-weight: bolder;
+}
+
+.btn--sedan {
+  color: var(--bright-orange);
+}
+
+.btn--suvs {
+  color: var(--dark-cyan);
+}
+
+.btn--luxury {
+  color: var(--v-dark-cyan);
+}
+
+footer {
+  padding-top: 7rem;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--v-dark-cyan);
+}
+
+footer a {
+  color: var(--accent-color);
+}
+
+@media (min-width: 40rem) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 20%;
+    margin: 8rem 0;
+  }
+
+  .sedans {
+    background: var(--bright-orange);
+
+    border-radius: 8px 0 0 8px;
+  }
+  .luxury {
+    background: var(--v-dark-cyan);
+    border-radius: 0 8px 8px 0;
+  }
+}
